@@ -1,3 +1,18 @@
+<!--
+  PERSONALIZAR ESTA DEMO PARA OTRO ESTUDIO
+  Usa buscar y reemplazar (Ctrl+H en VS Code) con estos textos:
+    Ánima Tattoo Studio  -> nombre completo del estudio
+    Ánima                -> nombre corto (logo y cabecera)
+    animatattoo          -> usuario de Instagram (sin @) y URL del repo
+    +1 809 000 0000      -> teléfono visible
+    18090000000          -> WhatsApp solo números, con código de país
+    Calle Principal 123  -> dirección
+    Santiago             -> ciudad
+    Martes a sábado, de 11:00 a 20:00 -> horario
+    Tu-Sa 11:00-20:00    -> horario para Google
+  Colores: variables --bg, --ink, --accent y --stencil al inicio del <style>.
+  Fotos: sube JPG a una carpeta "fotos" con los nombres trabajo-1.jpg ... trabajo-6.jpg.
+-->
 <!DOCTYPE html>
 <html lang="es" data-theme="">
 <head>
@@ -80,9 +95,16 @@ textarea{min-height:110px;resize:vertical}
 .info strong{color:var(--ink)}
 footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
 .fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0;padding:0;list-style:none}
+.work{position:relative;aspect-ratio:1;margin:0;background:var(--bg2);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:.95rem;padding:1rem}
+.work:nth-child(1){grid-row:span 2;aspect-ratio:auto}
+.work img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.work span{font-family:var(--display);font-size:1.5rem;color:var(--stencil);display:block}
 @media (max-width:820px){
   .hero,.book{grid-template-columns:1fr}
   .artists,.steps{grid-template-columns:1fr 1fr}
+  .works{grid-template-columns:1fr 1fr}
+  .work:nth-child(1){grid-row:auto;aspect-ratio:1}
   .styles li{grid-template-columns:1fr;gap:.2rem}
   nav a:not(.btn){display:none}
   .hero{padding:2.5rem 0 3rem}
@@ -100,6 +122,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
     <a class="logo" href="#inicio">Ánima</a>
     <nav aria-label="Principal">
       <a href="#estilos">Estilos</a>
+      <a href="#trabajos">Trabajos</a>
       <a href="#artistas">Artistas</a>
       <a href="#proceso">Proceso</a>
       <a href="#faq">Dudas</a>
@@ -137,6 +160,20 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
         <li><strong>Blackwork</strong><span>Negro sólido, geometría y puntillismo. Piezas de gran contraste y mucha presencia.</span></li>
         <li><strong>Realismo</strong><span>Retratos y objetos en sombras suaves. Pedimos referencias nítidas para trabajar bien.</span></li>
         <li><strong>Cover up</strong><span>Reformamos tatuajes antiguos que ya no te representan. Valoramos cada caso en consulta.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="trabajos">
+    <div class="wrap">
+      <h2>Trabajos</h2>
+      <ul class="works">
+        <li class="work"><span>Fine line</span>Tu foto aquí<img src="fotos/trabajo-1.jpg" alt="Tatuaje fine line: floral en antebrazo" loading="lazy" onerror="this.remove()"></li>
+        <li class="work"><span>Neotradicional</span>Tu foto aquí<img src="fotos/trabajo-2.jpg" alt="Tatuaje neotradicional: serpiente y rosa" loading="lazy" onerror="this.remove()"></li>
+        <li class="work"><span>Blackwork</span>Tu foto aquí<img src="fotos/trabajo-3.jpg" alt="Tatuaje blackwork: geometría en brazo" loading="lazy" onerror="this.remove()"></li>
+        <li class="work"><span>Realismo</span>Tu foto aquí<img src="fotos/trabajo-4.jpg" alt="Tatuaje realismo: retrato en sombras" loading="lazy" onerror="this.remove()"></li>
+        <li class="work"><span>Fine line</span>Tu foto aquí<img src="fotos/trabajo-5.jpg" alt="Tatuaje fine line: letras en costilla" loading="lazy" onerror="this.remove()"></li>
+        <li class="work"><span>Cover up</span>Tu foto aquí<img src="fotos/trabajo-6.jpg" alt="Tatuaje cover up: pieza renovada" loading="lazy" onerror="this.remove()"></li>
       </ul>
     </div>
   </section>
