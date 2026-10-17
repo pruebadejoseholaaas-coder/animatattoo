@@ -1,20 +1,13 @@
 <!--
-  PERSONALIZAR ESTA DEMO PARA OTRO ESTUDIO
-  Usa buscar y reemplazar (Ctrl+H en VS Code) con estos textos:
-    Ánima Tattoo Studio  -> nombre completo del estudio
-    Ánima                -> nombre corto (logo y cabecera)
-    animatattoo          -> usuario de Instagram (sin @) y URL del repo
-    +1 809 000 0000      -> teléfono visible
-    18090000000          -> WhatsApp solo números, con código de país
-    Calle Principal 123  -> dirección
-    Santiago             -> ciudad
-    Martes a sábado, de 11:00 a 20:00 -> horario
-    Tu-Sa 11:00-20:00    -> horario para Google
-  Colores: variables --bg, --ink, --accent y --stencil al inicio del <style>.
-  Fotos: sube JPG a una carpeta "fotos" con los nombres trabajo-1.jpg ... trabajo-6.jpg.
+  PERSONALIZAR PARA OTRO ESTUDIO (buscar y reemplazar, Ctrl+H):
+    Ánima Tattoo Studio -> nombre completo | Ánima -> nombre corto | animatattoo -> Instagram y URL
+    +1 809 000 0000 -> teléfono | 18090000000 -> WhatsApp (solo números, con país)
+    Calle Principal 123 -> dirección | Santiago -> ciudad
+    Martes a sábado, de 11:00 a 20:00 -> horario | Tu-Sa 11:00-20:00 -> horario para Google
+  Colores: variables al inicio del <style>. Fotos: carpeta "fotos", trabajo-1.jpg ... trabajo-6.jpg
 -->
 <!DOCTYPE html>
-<html lang="es" data-theme="">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -28,227 +21,227 @@
 {"@context":"https://schema.org","@type":"TattooParlor","name":"Ánima Tattoo Studio","url":"https://pruebadejoseholaaas-coder.github.io/animatattoo/","telephone":"+1 809 000 0000","openingHours":["Tu-Sa 11:00-20:00"],"address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"DO"}}
 </script>
 <style>
-:root{
-  --bg:#F4EFFA; --bg2:#E8E0F4; --ink:#1B1030; --muted:#5A4D75;
-  --accent:#C2410C; --line:#1B103033; --stencil:#4B3BC4; --on-accent:#fff;
-  --display:"Pirata One","Old English Text MT",Georgia,serif;
-  --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#1B1030; --bg2:#25174A; --ink:#F2E9E4; --muted:#B9ACD6;
-    --accent:#F0B79A; --line:#F2E9E433; --stencil:#8F7CFF; --on-accent:#1B1030; color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#1B1030; --bg2:#25174A; --ink:#F2E9E4; --muted:#B9ACD6;
-  --accent:#F0B79A; --line:#F2E9E433; --stencil:#8F7CFF; --on-accent:#1B1030; color-scheme:dark;
-}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+:root{--bg:#0F0B12;--surface:#1A141F;--ink:#F3EAE6;--muted:#A89DB5;--accent:#E9B79B;--on-accent:#1A0F0A;--line:#F3EAE622;--stencil:#9B8CFF;color-scheme:dark;
+--display:"Pirata One","Old English Text MT",Georgia,serif;--body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:light){:root{--bg:#F6F1F7;--surface:#E9E1EE;--ink:#1A1020;--muted:#5E516C;--accent:#B4440E;--on-accent:#fff;--line:#1A102026;--stencil:#4B3BC4;color-scheme:light}}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65;font-size:1.05rem}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body);overflow-x:hidden}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
-.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-family:var(--display);font-size:1.7rem;text-decoration:none;letter-spacing:.02em}
-nav a{margin-left:1.4rem;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.4rem}
+header{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:400 1.9rem var(--display);text-decoration:none}
+nav{display:flex;align-items:center;gap:1.6rem}
+nav a{text-decoration:none;font-weight:500;font-size:.93rem;color:var(--muted)}
 nav a:hover{color:var(--ink)}
-.btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:.85rem 1.6rem;border:0;border-radius:2px;font:700 1rem var(--body);text-decoration:none;cursor:pointer}
-.btn:hover{filter:brightness(1.08)}
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;padding:4.5rem 0 5rem}
-h1{font-family:var(--display);font-weight:400;font-size:clamp(3.2rem,9vw,6.4rem);line-height:.95;margin:0 0 1.4rem}
-.lead{max-width:34rem;color:var(--muted);font-size:1.15rem;margin:0 0 2rem}
-.stencil{width:100%;max-width:380px;justify-self:center;color:var(--stencil)}
-.stencil path,.stencil circle,.stencil line{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.2s ease-out .2s forwards}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:.9rem 1.7rem;border:0;border-radius:999px;font:700 .98rem var(--body);text-decoration:none;cursor:pointer;transition:transform .2s}
+nav a.btn{color:var(--on-accent);padding:.55rem 1.2rem}
+.btn:hover{transform:translateY(-2px)}
+.ghost{background:none;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:110px 0 2.5rem;overflow:hidden}
+.dagger{position:absolute;right:max(1rem,calc(50% - 540px));top:90px;height:calc(100% - 200px);max-height:640px;color:var(--stencil);opacity:.9}
+.dagger *{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.4s cubic-bezier(.5,0,.2,1) .2s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-section{padding:4.5rem 0;border-top:1px solid var(--line)}
-h2{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;margin:0 0 2rem}
-.styles{list-style:none;margin:0;padding:0}
-.styles li{display:grid;grid-template-columns:minmax(9rem,14rem) 1fr;gap:1.5rem;padding:1.3rem 0;border-bottom:1px solid var(--line)}
-.styles strong{font-family:var(--display);font-weight:400;font-size:1.8rem;line-height:1.1}
-.styles span{color:var(--muted);align-self:center}
-.artists{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem}
-.artists h3{font-family:var(--display);font-weight:400;font-size:1.7rem;margin:.8rem 0 .2rem}
-.artists p{margin:0;color:var(--muted);font-size:.98rem}
-.mono{aspect-ratio:4/5;background:var(--bg2);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--display);font-size:4.5rem;color:var(--stencil)}
-.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem}
-.steps li{counter-increment:s;border-top:3px solid var(--accent);padding-top:1rem}
-.steps li::before{content:counter(s);font-family:var(--display);font-size:2.4rem;color:var(--accent);display:block;line-height:1}
-.steps h3{margin:.4rem 0;font-size:1.1rem}
-.steps p{margin:0;color:var(--muted);font-size:.97rem}
-details{border-bottom:1px solid var(--line);padding:1rem 0}
+h1{position:relative;font:400 clamp(3.6rem,12.5vw,10.5rem)/.86 var(--display);margin:0 0 2rem;filter:url(#ink);letter-spacing:.005em}
+h1 span{display:block}
+.lead{position:relative;max-width:30rem;color:var(--muted);font-size:1.12rem;margin:0 0 1.8rem}
+.cta{position:relative;display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:3rem}
+.facts{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;border-top:1px solid var(--line);padding-top:1.2rem;font-size:.95rem;color:var(--muted)}
+.facts b{display:block;color:var(--ink);font-weight:700}
+section{padding:6rem 0;border-top:1px solid var(--line)}
+h2{font:400 clamp(2.6rem,6vw,4.6rem)/.95 var(--display);margin:0 0 2.5rem}
+.styles{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
+.st{all:unset;box-sizing:border-box;display:block;width:100%;padding:1.3rem 0;border-bottom:1px solid var(--line);cursor:pointer}
+.st:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.st strong{display:block;font:400 clamp(2rem,4.5vw,3.2rem)/1 var(--display);color:var(--muted);transition:color .25s,padding .25s}
+.st span{display:block;max-width:30rem;color:var(--muted);font-size:.97rem;margin-top:.4rem;max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .3s}
+.st:hover strong,.st:focus strong,.st.on strong{color:var(--ink);padding-left:.8rem}
+.st:hover span,.st:focus span,.st.on span{max-height:6rem;opacity:1}
+.pv{position:sticky;top:96px;aspect-ratio:4/5;background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:grid;place-items:center;font:400 3rem var(--display);color:var(--stencil);text-align:center;padding:1rem}
+.pv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.works{columns:3;column-gap:1rem}
+.w{position:relative;margin:0 0 1rem;break-inside:avoid;min-height:240px;background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:grid;place-items:center;color:var(--muted);font-size:.9rem}
+.w img{display:block;width:100%;height:auto;position:relative;filter:grayscale(.55) contrast(1.05);transition:filter .4s}
+.w:hover img{filter:none}
+.w figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:2rem .9rem .7rem;background:linear-gradient(transparent,#000a);color:#fff;font-size:.88rem}
+.w .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:1rem}
+.team div{display:grid;grid-template-columns:5rem 1fr 1fr;gap:1.5rem;align-items:center;padding:1.5rem 0;border-top:1px solid var(--line)}
+.team div:last-child{border-bottom:1px solid var(--line)}
+.team i{font:400 4.2rem/1 var(--display);font-style:normal;color:transparent;-webkit-text-stroke:1px var(--stencil)}
+.team h3{margin:0;font:400 2rem var(--display)}
+.team p{margin:0;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;counter-reset:s}
+.steps li{counter-increment:s;border-top:1px solid var(--line);padding-top:1rem}
+.steps li::before{content:counter(s);font:400 4rem/1 var(--display);color:transparent;-webkit-text-stroke:1px var(--accent);display:block}
+.steps h3{margin:.5rem 0 .3rem;font-size:1.1rem}
+.steps p{margin:0;color:var(--muted);font-size:.96rem}
+details{border-bottom:1px solid var(--line);padding:1.1rem 0}
+details:first-of-type{border-top:1px solid var(--line)}
 summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
-summary::after{content:"+";font-size:1.4rem;line-height:1}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--accent)}
 details[open] summary::after{content:"–"}
 details p{margin:.7rem 0 0;color:var(--muted);max-width:42rem}
-.book{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-form{display:grid;gap:1rem}
-label{font-weight:700;font-size:.95rem;display:grid;gap:.35rem}
-input,select,textarea{font:inherit;color:inherit;background:var(--bg2);border:1px solid var(--line);border-radius:2px;padding:.75rem .85rem;width:100%}
-textarea{min-height:110px;resize:vertical}
-.info p{margin:0 0 1rem;color:var(--muted)}
-.info strong{color:var(--ink)}
-footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
-.fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.works{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0;padding:0;list-style:none}
-.work{position:relative;aspect-ratio:1;margin:0;background:var(--bg2);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:.95rem;padding:1rem}
-.work:nth-child(1){grid-row:span 2;aspect-ratio:auto}
-.work img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.work span{font-family:var(--display);font-size:1.5rem;color:var(--stencil);display:block}
-@media (max-width:820px){
-  .hero,.book{grid-template-columns:1fr}
-  .artists,.steps{grid-template-columns:1fr 1fr}
-  .works{grid-template-columns:1fr 1fr}
-  .work:nth-child(1){grid-row:auto;aspect-ratio:1}
-  .styles li{grid-template-columns:1fr;gap:.2rem}
+.book{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem}
+form{display:grid;gap:1.1rem}
+label{display:grid;gap:.35rem;font-weight:700;font-size:.93rem}
+input,select,textarea{font:inherit;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;width:100%}
+textarea{min-height:120px;resize:vertical}
+.info p{margin:0 0 1.2rem;color:var(--muted)}
+.info b{color:var(--ink);display:block}
+footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
+.mark{font:400 clamp(6rem,26vw,20rem)/.8 var(--display);color:transparent;-webkit-text-stroke:1px var(--line);margin:0 0 1.5rem;user-select:none}
+.fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:var(--muted);font-size:.9rem}
+.float{display:none}
+@media (max-width:860px){
   nav a:not(.btn){display:none}
-  .hero{padding:2.5rem 0 3rem}
+  .dagger{opacity:.35;right:-3rem;height:60%;top:80px}
+  .facts{grid-template-columns:1fr}
+  .styles,.book{grid-template-columns:1fr;gap:2rem}
+  .pv{display:none}
+  .st span{max-height:6rem;opacity:1}.st strong{color:var(--ink)}
+  .works{columns:2}
+  .steps{grid-template-columns:1fr 1fr}
+  .team div{grid-template-columns:3.5rem 1fr}.team p{grid-column:2}
+  section{padding:4rem 0}
+  .float{display:block;position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;box-shadow:0 8px 24px #0006}
 }
-@media (max-width:520px){.artists,.steps{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .stencil path,.stencil circle,.stencil line{animation:none;stroke-dashoffset:0}
-}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dagger *{animation:none;stroke-dashoffset:0}*{transition:none!important}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute"><filter id="ink"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/></filter></svg>
+
 <header>
   <div class="wrap bar">
     <a class="logo" href="#inicio">Ánima</a>
     <nav aria-label="Principal">
-      <a href="#estilos">Estilos</a>
-      <a href="#trabajos">Trabajos</a>
-      <a href="#artistas">Artistas</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#faq">Dudas</a>
+      <a href="#estilos">Estilos</a><a href="#trabajos">Trabajos</a><a href="#artistas">Artistas</a><a href="#proceso">Proceso</a><a href="#faq">Dudas</a>
       <a class="btn" href="#cita">Pedir cita</a>
     </nav>
   </div>
 </header>
 
 <main id="inicio">
-  <div class="wrap hero">
-    <div>
-      <h1>Tinta que se queda contigo.</h1>
-      <p class="lead">Ánima Tattoo Studio es un estudio privado de tatuajes de autor. Cada diseño se dibuja desde cero, para tu piel y tu historia, con material estéril de un solo uso.</p>
-      <a class="btn" href="#cita">Pedir cita</a>
-    </div>
-    <svg class="stencil" viewBox="0 0 300 380" role="img" aria-label="Daga con rosa, dibujada en línea">
-      <circle pathLength="1" cx="150" cy="190" r="136"/>
-      <circle pathLength="1" cx="150" cy="190" r="118"/>
-      <path pathLength="1" d="M150 36 L168 150 L168 214 L132 214 L132 150 Z"/>
-      <line pathLength="1" x1="150" y1="52" x2="150" y2="206"/>
+  <div class="hero">
+    <svg class="dagger" viewBox="0 0 300 380" role="img" aria-label="Daga con rosa, dibujada en línea">
+      <circle pathLength="1" cx="150" cy="190" r="140"/><circle pathLength="1" cx="150" cy="190" r="124"/>
+      <path pathLength="1" d="M150 36 L168 150 L168 214 L132 214 L132 150 Z"/><path pathLength="1" d="M150 52 L150 206"/>
       <path pathLength="1" d="M92 214 Q150 232 208 214 L208 226 Q150 244 92 226 Z"/>
-      <path pathLength="1" d="M142 232 L142 300 L158 300 L158 232"/>
-      <path pathLength="1" d="M150 300 m-14 8 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0"/>
+      <path pathLength="1" d="M142 232 L142 300 L158 300 L158 232"/><circle pathLength="1" cx="150" cy="308" r="14"/>
       <path pathLength="1" d="M150 322 C120 330 108 352 126 362 C142 370 150 354 150 354 C150 354 158 370 174 362 C192 352 180 330 150 322 Z"/>
-      <path pathLength="1" d="M150 340 C140 344 142 352 150 352 C158 352 160 344 150 340"/>
     </svg>
+    <div class="wrap">
+      <h1><span>Tinta que</span><span>se queda</span><span>contigo.</span></h1>
+      <p class="lead">Estudio privado de tatuajes de autor. Cada diseño se dibuja desde cero, para tu piel y tu historia.</p>
+      <div class="cta"><a class="btn" href="#cita">Pedir cita</a><a class="btn ghost" href="#trabajos">Ver trabajos</a></div>
+      <div class="facts"><div><b>Diseño a medida</b>Nada de catálogos ni copias.</div><div><b>Material estéril</b>Agujas nuevas, siempre.</div><div><b>Solo con cita</b>Tiempo completo para tu pieza.</div></div>
+    </div>
   </div>
 
-  <section id="estilos">
-    <div class="wrap">
-      <h2>Estilos</h2>
-      <ul class="styles">
-        <li><strong>Fine line</strong><span>Trazo fino y delicado: florales, letras, animales y piezas pequeñas con mucho detalle.</span></li>
-        <li><strong>Neotradicional</strong><span>Contorno firme, color saturado y motivos clásicos con una vuelta moderna.</span></li>
-        <li><strong>Blackwork</strong><span>Negro sólido, geometría y puntillismo. Piezas de gran contraste y mucha presencia.</span></li>
-        <li><strong>Realismo</strong><span>Retratos y objetos en sombras suaves. Pedimos referencias nítidas para trabajar bien.</span></li>
-        <li><strong>Cover up</strong><span>Reformamos tatuajes antiguos que ya no te representan. Valoramos cada caso en consulta.</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="trabajos">
-    <div class="wrap">
-      <h2>Trabajos</h2>
-      <ul class="works">
-        <li class="work"><span>Fine line</span>Tu foto aquí<img src="fotos/trabajo-1.jpg" alt="Tatuajes de pareja: león y leona con flecha" loading="lazy" onerror="this.remove()"></li>
-        <li class="work"><span>Realismo</span>Tu foto aquí<img src="fotos/trabajo-2.jpg" alt="Águila en realismo sobre antebrazo" loading="lazy" onerror="this.remove()"></li>
-        <li class="work"><span>Blackwork</span>Tu foto aquí<img src="fotos/trabajo-3.jpg" alt="Lettering en blackwork sobre el cuello" loading="lazy" onerror="this.remove()"></li>
-        <li class="work"><span>Blackwork</span>Tu foto aquí<img src="fotos/trabajo-4.jpg" alt="Rama de hojas en negro sobre antebrazo" loading="lazy" onerror="this.remove()"></li>
-        <li class="work"><span>Blackwork</span>Tu foto aquí<img src="fotos/trabajo-5.jpg" alt="Rosa en negro sobre antebrazo" loading="lazy" onerror="this.remove()"></li>
-        <li class="work"><span>Cover up</span>Tu foto aquí<img src="fotos/trabajo-6.jpg" alt="Tatuaje cover up: pieza renovada" loading="lazy" onerror="this.remove()"></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="artistas">
-    <div class="wrap">
-      <h2>Artistas</h2>
-      <div class="artists">
-        <article><div class="mono" aria-hidden="true">M</div><h3>Marcela Vidal</h3><p>Fine line y botánico. Diez años dibujando sobre piel.</p></article>
-        <article><div class="mono" aria-hidden="true">D</div><h3>Daniel Reyes</h3><p>Neotradicional y cover up. Color con carácter.</p></article>
-        <article><div class="mono" aria-hidden="true">S</div><h3>Sofía Peña</h3><p>Blackwork y realismo. Piezas grandes en varias sesiones.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="proceso">
-    <div class="wrap">
-      <h2>Cómo trabajamos</h2>
-      <ol class="steps">
-        <li><h3>Consulta</h3><p>Nos cuentas la idea, la zona y el tamaño. Te damos un presupuesto sin compromiso.</p></li>
-        <li><h3>Diseño</h3><p>Dibujamos tu propuesta y la ajustamos contigo antes del día de la sesión.</p></li>
-        <li><h3>Sesión</h3><p>Plantilla sobre la piel, aguja nueva y cabina desinfectada delante de ti.</p></li>
-        <li><h3>Cuidados</h3><p>Te damos instrucciones por escrito y revisamos la cicatrización si lo necesitas.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="wrap">
-      <h2>Dudas frecuentes</h2>
-      <details><summary>¿Cuánto cuesta un tatuaje?</summary><p>Depende del tamaño, el detalle y las horas de trabajo. Tras la consulta recibes un precio cerrado por escrito.</p></details>
-      <details><summary>¿Hace falta dejar un depósito?</summary><p>Sí. Un depósito reserva tu fecha y se descuenta del precio final. Si cambias de fecha con 48 horas de aviso, lo conservamos.</p></details>
-      <details><summary>¿Duele mucho?</summary><p>Varía según la zona y tu sensibilidad. Costillas, pies y manos suelen doler más. Haremos pausas cuando las necesites.</p></details>
-      <details><summary>¿Hay edad mínima?</summary><p>Solo tatuamos a mayores de 18 años, con documento de identidad en la sesión.</p></details>
-    </div>
-  </section>
-
-  <section id="cita">
-    <div class="wrap book">
+  <section id="estilos"><div class="wrap">
+    <h2>Estilos</h2>
+    <div class="styles">
       <div>
-        <h2>Pide tu cita</h2>
-        <form id="f">
-          <label>Nombre<input name="n" required autocomplete="name"></label>
-          <label>Estilo
-            <select name="e"><option>Fine line</option><option>Neotradicional</option><option>Blackwork</option><option>Realismo</option><option>Cover up</option><option>No lo sé aún</option></select>
-          </label>
-          <label>Tu idea<textarea name="i" required placeholder="Zona del cuerpo, tamaño aproximado y qué quieres contar"></textarea></label>
-          <button class="btn" type="submit">Enviar por WhatsApp</button>
-        </form>
+        <button class="st on" data-img="fotos/trabajo-1.jpg"><strong>Fine line</strong><span>Trazo fino y delicado: florales, letras, animales y piezas pequeñas con mucho detalle.</span></button>
+        <button class="st" data-img=""><strong>Neotradicional</strong><span>Contorno firme, color saturado y motivos clásicos con una vuelta moderna.</span></button>
+        <button class="st" data-img="fotos/trabajo-3.jpg"><strong>Blackwork</strong><span>Negro sólido, geometría y lettering. Piezas de gran contraste y mucha presencia.</span></button>
+        <button class="st" data-img="fotos/trabajo-2.jpg"><strong>Realismo</strong><span>Retratos y animales en sombras suaves. Pedimos referencias nítidas para trabajar bien.</span></button>
+        <button class="st" data-img=""><strong>Cover up</strong><span>Reformamos tatuajes antiguos que ya no te representan. Valoramos cada caso en consulta.</span></button>
       </div>
-      <div class="info">
-        <h2>Visítanos</h2>
-        <p><strong>Dirección</strong><br>Calle Principal 123, Santiago</p>
-        <p><strong>Horario</strong><br>Martes a sábado, de 11:00 a 20:00</p>
-        <p><strong>Teléfono</strong><br>+1 809 000 0000</p>
-        <p><strong>Instagram</strong><br>@animatattoo</p>
-      </div>
+      <div class="pv" aria-hidden="true"><span id="pvt">Fine line</span><img id="pvi" src="fotos/trabajo-1.jpg" alt=""></div>
     </div>
-  </section>
+  </div></section>
+
+  <section id="trabajos"><div class="wrap">
+    <h2>Trabajos</h2>
+    <div class="works">
+      <figure class="w"><span class="ph">Tu foto aquí</span><img src="fotos/trabajo-1.jpg" alt="Tatuajes de pareja: león y leona con flecha" loading="lazy" onerror="this.remove()"><figcaption>Fine line · Pareja</figcaption></figure>
+      <figure class="w"><span class="ph">Tu foto aquí</span><img src="fotos/trabajo-5.jpg" alt="Rosa en negro sobre antebrazo" loading="lazy" onerror="this.remove()"><figcaption>Blackwork · Rosa</figcaption></figure>
+      <figure class="w"><span class="ph">Tu foto aquí</span><img src="fotos/trabajo-2.jpg" alt="Águila en realismo sobre antebrazo" loading="lazy" onerror="this.remove()"><figcaption>Realismo · Águila</figcaption></figure>
+      <figure class="w"><span class="ph">Tu foto aquí</span><img src="fotos/trabajo-3.jpg" alt="Lettering en blackwork sobre el cuello" loading="lazy" onerror="this.remove()"><figcaption>Blackwork · Lettering</figcaption></figure>
+      <figure class="w"><span class="ph">Tu foto aquí</span><img src="fotos/trabajo-4.jpg" alt="Rama de hojas en negro sobre antebrazo" loading="lazy" onerror="this.remove()"><figcaption>Blackwork · Botánico</figcaption></figure>
+      <figure class="w"><span class="ph">Tu foto aquí</span><img src="fotos/trabajo-6.jpg" alt="Tatuaje cover up renovado" loading="lazy" onerror="this.remove()"><figcaption>Cover up</figcaption></figure>
+    </div>
+  </div></section>
+
+  <section id="artistas"><div class="wrap">
+    <h2>Artistas</h2>
+    <div class="team">
+      <div><i>M</i><h3>Marcela Vidal</h3><p>Fine line y botánico. Diez años dibujando sobre piel.</p></div>
+      <div><i>D</i><h3>Daniel Reyes</h3><p>Neotradicional y cover up. Color con carácter.</p></div>
+      <div><i>S</i><h3>Sofía Peña</h3><p>Blackwork y realismo. Piezas grandes en varias sesiones.</p></div>
+    </div>
+  </div></section>
+
+  <section id="proceso"><div class="wrap">
+    <h2>Cómo trabajamos</h2>
+    <ol class="steps">
+      <li><h3>Consulta</h3><p>Nos cuentas la idea, la zona y el tamaño. Te damos un presupuesto sin compromiso.</p></li>
+      <li><h3>Diseño</h3><p>Dibujamos tu propuesta y la ajustamos contigo antes del día de la sesión.</p></li>
+      <li><h3>Sesión</h3><p>Plantilla sobre la piel, aguja nueva y cabina desinfectada delante de ti.</p></li>
+      <li><h3>Cuidados</h3><p>Instrucciones por escrito y revisión de la cicatrización si la necesitas.</p></li>
+    </ol>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <h2>Dudas frecuentes</h2>
+    <details><summary>¿Cuánto cuesta un tatuaje?</summary><p>Depende del tamaño, el detalle y las horas de trabajo. Tras la consulta recibes un precio cerrado por escrito.</p></details>
+    <details><summary>¿Hace falta dejar un depósito?</summary><p>Sí. Reserva tu fecha y se descuenta del precio final. Si cambias de fecha con 48 horas de aviso, lo conservamos.</p></details>
+    <details><summary>¿Duele mucho?</summary><p>Varía según la zona y tu sensibilidad. Costillas, pies y manos suelen doler más. Haremos pausas cuando las necesites.</p></details>
+    <details><summary>¿Hay edad mínima?</summary><p>Solo tatuamos a mayores de 18 años, con documento de identidad en la sesión.</p></details>
+  </div></section>
+
+  <section id="cita"><div class="wrap book">
+    <div>
+      <h2>Pide tu cita</h2>
+      <form id="f">
+        <label>Nombre<input name="n" required autocomplete="name"></label>
+        <label>Estilo<select name="e"><option>Fine line</option><option>Neotradicional</option><option>Blackwork</option><option>Realismo</option><option>Cover up</option><option>No lo sé aún</option></select></label>
+        <label>Tu idea<textarea name="i" required placeholder="Zona del cuerpo, tamaño aproximado y qué quieres contar"></textarea></label>
+        <button class="btn" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+    <div class="info">
+      <h2>Visítanos</h2>
+      <p><b>Dirección</b>Calle Principal 123, Santiago</p>
+      <p><b>Horario</b>Martes a sábado, de 11:00 a 20:00</p>
+      <p><b>Teléfono</b>+1 809 000 0000</p>
+      <p><b>Instagram</b>@animatattoo</p>
+    </div>
+  </div></section>
 </main>
 
-<footer>
-  <div class="wrap fl">
-    <span>© 2026 Ánima Tattoo Studio</span>
-    <span>Solo mayores de 18 años</span>
-  </div>
-</footer>
+<footer><div class="wrap">
+  <p class="mark" aria-hidden="true">Ánima</p>
+  <div class="fl"><span>© 2026 Ánima Tattoo Studio</span><span>Solo mayores de 18 años</span></div>
+</div></footer>
+<a class="btn float" href="#cita">Pedir cita</a>
 
 <script>
-document.getElementById("f").addEventListener("submit",function(ev){
-  ev.preventDefault();
-  var d=new FormData(ev.target);
-  var t="Hola, soy "+d.get("n")+". Quiero un tatuaje de estilo "+d.get("e")+". "+d.get("i");
-  window.open("https://wa.me/18090000000?text="+encodeURIComponent(t),"_blank","noopener");
-});
+(function(){
+  var pi=document.getElementById("pvi"),pt=document.getElementById("pvt");
+  function show(b){
+    document.querySelectorAll(".st").forEach(function(x){x.classList.toggle("on",x===b)});
+    pt.textContent=b.querySelector("strong").textContent;
+    var s=b.getAttribute("data-img");
+    pi.style.display="none";
+    if(s){pi.onload=function(){pi.style.display=""};pi.onerror=function(){pi.style.display="none"};pi.src=s}
+  }
+  document.querySelectorAll(".st").forEach(function(b){
+    b.addEventListener("mouseenter",function(){show(b)});
+    b.addEventListener("focus",function(){show(b)});
+    b.addEventListener("click",function(){show(b)});
+  });
+  document.getElementById("f").addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var d=new FormData(ev.target);
+    var t="Hola, soy "+d.get("n")+". Quiero un tatuaje de estilo "+d.get("e")+". "+d.get("i");
+    window.open("https://wa.me/18090000000?text="+encodeURIComponent(t),"_blank","noopener");
+  });
+})();
 </script>
 </body>
 </html>
