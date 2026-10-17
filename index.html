@@ -4,6 +4,7 @@
     +1 809 000 0000 -> teléfono | 18090000000 -> WhatsApp (solo números, con país)
     Calle Principal 123 -> dirección | Santiago -> ciudad
     Martes a sábado, de 11:00 a 20:00 -> horario | Tu-Sa 11:00-20:00 -> horario para Google
+  OJO: precios y opiniones son EJEMPLOS. Cámbialos por los reales del estudio (nunca publiques opiniones inventadas en una web real).
   Colores: variables al inicio del <style>. Fotos: carpeta "fotos", trabajo-1.jpg ... trabajo-6.jpg
 -->
 <!DOCTYPE html>
@@ -14,12 +15,20 @@
 <title>Ánima Tattoo Studio | Tatuajes de autor en Santiago</title>
 <meta name="google-site-verification" content="V-3mLZhaTlL85AzDXgcetqXu1GfvsFVvXHLEiQzJYz4" />
 <meta name="description" content="Estudio de tatuajes de autor: fine line, neotradicional, blackwork y realismo. Diseño a medida, higiene estricta y cita previa.">
+<meta name="theme-color" content="#0F0B12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ánima Tattoo Studio | Tatuajes de autor">
+<meta property="og:description" content="Fine line, neotradicional, blackwork y realismo. Diseño a medida y cita previa.">
+<meta property="og:image" content="https://pruebadejoseholaaas-coder.github.io/animatattoo/fotos/trabajo-1.jpg">
+<meta property="og:url" content="https://pruebadejoseholaaas-coder.github.io/animatattoo/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%97%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <link rel="canonical" href="https://pruebadejoseholaaas-coder.github.io/animatattoo/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TattooParlor","name":"Ánima Tattoo Studio","url":"https://pruebadejoseholaaas-coder.github.io/animatattoo/","telephone":"+1 809 000 0000","openingHours":["Tu-Sa 11:00-20:00"],"address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"DO"}}
+{"@context":"https://schema.org","@type":"TattooParlor","name":"Ánima Tattoo Studio","url":"https://pruebadejoseholaaas-coder.github.io/animatattoo/","priceRange":"$$","sameAs":["https://instagram.com/animatattoo"],"telephone":"+1 809 000 0000","openingHours":["Tu-Sa 11:00-20:00"],"address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"DO"}}
 </script>
 <style>
 :root{--bg:#0F0B12;--surface:#1A141F;--ink:#F3EAE6;--muted:#A89DB5;--accent:#E9B79B;--on-accent:#1A0F0A;--line:#F3EAE622;--stencil:#9B8CFF;color-scheme:dark;
@@ -94,6 +103,26 @@ textarea{min-height:120px;resize:vertical}
 footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
 .mark{font:400 clamp(6rem,26vw,20rem)/.8 var(--display);color:transparent;-webkit-text-stroke:1px var(--line);margin:0 0 1.5rem;user-select:none}
 .fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:var(--muted);font-size:.9rem}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.pr{border:1px solid var(--line);border-radius:8px;padding:1.7rem;background:var(--surface);display:flex;flex-direction:column;gap:.5rem}
+.pr.hot{border-color:var(--accent)}
+.pr h3{margin:0;font:400 1.9rem var(--display)}
+.pr .n{font:400 2.8rem/1 var(--display);color:var(--accent)}
+.pr p{margin:0;color:var(--muted);font-size:.96rem}
+.note{color:var(--muted);font-size:.9rem;margin:1.2rem 0 0}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.quotes blockquote{margin:0;border-top:1px solid var(--line);padding-top:1rem}
+.quotes blockquote::before{content:"\201C";font:400 4.5rem/.7 var(--display);color:var(--accent);display:block}
+.quotes p{margin:.4rem 0 1rem}
+.quotes cite{font-style:normal;color:var(--muted);font-size:.92rem}
+.stars{color:var(--accent);letter-spacing:.15em;display:block}
+.w img{cursor:zoom-in}
+dialog.lb{border:0;background:transparent;padding:0;max-width:92vw;max-height:92vh;color:#fff;overflow:visible}
+dialog.lb::backdrop{background:#000d}
+dialog.lb img{display:block;max-width:92vw;max-height:80vh;border-radius:6px}
+dialog.lb p{text-align:center;margin:.7rem 0 0}
+dialog.lb button{position:absolute;top:-2.8rem;right:0;background:none;border:0;color:#fff;font-size:2.2rem;line-height:1;cursor:pointer}
+.ig{display:inline-block;margin-top:.4rem}
 .float{display:none}
 @media (max-width:860px){
   nav a:not(.btn){display:none}
@@ -108,6 +137,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
   section{padding:4rem 0}
   .float{display:block;position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;box-shadow:0 8px 24px #0006}
 }
+@media (max-width:860px){.prices,.quotes{grid-template-columns:1fr}}
 @media (max-width:520px){.steps{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dagger *{animation:none;stroke-dashoffset:0}*{transition:none!important}}
 </style>
@@ -119,7 +149,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
   <div class="wrap bar">
     <a class="logo" href="#inicio">Ánima</a>
     <nav aria-label="Principal">
-      <a href="#estilos">Estilos</a><a href="#trabajos">Trabajos</a><a href="#artistas">Artistas</a><a href="#proceso">Proceso</a><a href="#faq">Dudas</a>
+      <a href="#estilos">Estilos</a><a href="#trabajos">Trabajos</a><a href="#precios">Precios</a><a href="#artistas">Artistas</a><a href="#proceso">Proceso</a><a href="#faq">Dudas</a>
       <a class="btn" href="#cita">Pedir cita</a>
     </nav>
   </div>
@@ -168,6 +198,16 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
     </div>
   </div></section>
 
+  <section id="precios"><div class="wrap">
+    <h2>Precios</h2>
+    <div class="prices">
+      <div class="pr"><h3>Pieza pequeña</h3><div class="n">desde $60</div><p>Hasta 5 cm. Letras, símbolos y detalles finos. Una sesión corta.</p></div>
+      <div class="pr hot"><h3>Pieza mediana</h3><div class="n">desde $150</div><p>Hasta 15 cm. Florales, animales y lettering con sombra. Una sesión.</p></div>
+      <div class="pr"><h3>Pieza grande</h3><div class="n">A cotizar</div><p>Mangas, espalda y cover up. Se presupuesta tras la consulta, por sesiones.</p></div>
+    </div>
+    <p class="note">Precios orientativos. El precio final es cerrado y por escrito después de la consulta.</p>
+  </div></section>
+
   <section id="artistas"><div class="wrap">
     <h2>Artistas</h2>
     <div class="team">
@@ -192,7 +232,17 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
     <details><summary>¿Cuánto cuesta un tatuaje?</summary><p>Depende del tamaño, el detalle y las horas de trabajo. Tras la consulta recibes un precio cerrado por escrito.</p></details>
     <details><summary>¿Hace falta dejar un depósito?</summary><p>Sí. Reserva tu fecha y se descuenta del precio final. Si cambias de fecha con 48 horas de aviso, lo conservamos.</p></details>
     <details><summary>¿Duele mucho?</summary><p>Varía según la zona y tu sensibilidad. Costillas, pies y manos suelen doler más. Haremos pausas cuando las necesites.</p></details>
+    <details><summary>¿Cómo cuido el tatuaje?</summary><p>Lávalo con agua y jabón neutro, mantenlo hidratado con una capa fina de crema y evita sol, piscina y mar las primeras semanas. Te damos las instrucciones por escrito.</p></details>
     <details><summary>¿Hay edad mínima?</summary><p>Solo tatuamos a mayores de 18 años, con documento de identidad en la sesión.</p></details>
+  </div></section>
+
+  <section id="opiniones"><div class="wrap">
+    <h2>Lo que dicen</h2>
+    <div class="quotes">
+      <blockquote><span class="stars" aria-label="5 de 5">★★★★★</span><p>Me explicaron todo antes de empezar y el diseño quedó mejor que lo que imaginaba.</p><cite>Laura, tatuaje fine line</cite></blockquote>
+      <blockquote><span class="stars" aria-label="5 de 5">★★★★★</span><p>Cabina impecable y mucha calma durante las cuatro horas. Ya reservé la segunda sesión.</p><cite>Carlos, blackwork en brazo</cite></blockquote>
+      <blockquote><span class="stars" aria-label="5 de 5">★★★★★</span><p>Tapé un tatuaje viejo que me daba pena y quedó irreconocible. Totalmente recomendado.</p><cite>Andrea, cover up</cite></blockquote>
+    </div>
   </div></section>
 
   <section id="cita"><div class="wrap book">
@@ -201,16 +251,18 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
       <form id="f">
         <label>Nombre<input name="n" required autocomplete="name"></label>
         <label>Estilo<select name="e"><option>Fine line</option><option>Neotradicional</option><option>Blackwork</option><option>Realismo</option><option>Cover up</option><option>No lo sé aún</option></select></label>
-        <label>Tu idea<textarea name="i" required placeholder="Zona del cuerpo, tamaño aproximado y qué quieres contar"></textarea></label>
+        <label>Zona del cuerpo<input name="z" placeholder="Antebrazo, costillas, tobillo..."></label>
+        <label>Tamaño aproximado<select name="t"><option>Pequeño (hasta 5 cm)</option><option>Mediano (hasta 15 cm)</option><option>Grande o manga</option><option>No lo sé aún</option></select></label>
+        <label>Tu idea<textarea name="i" required placeholder="Cuéntanos qué quieres tatuarte. Las fotos de referencia las puedes mandar luego por WhatsApp."></textarea></label>
         <button class="btn" type="submit">Enviar por WhatsApp</button>
       </form>
     </div>
     <div class="info">
       <h2>Visítanos</h2>
-      <p><b>Dirección</b>Calle Principal 123, Santiago</p>
+      <p><b>Dirección</b>Calle Principal 123, Santiago<br><a href="https://www.google.com/maps/search/?api=1&query=Calle+Principal+123+Santiago">Cómo llegar</a></p>
       <p><b>Horario</b>Martes a sábado, de 11:00 a 20:00</p>
       <p><b>Teléfono</b>+1 809 000 0000</p>
-      <p><b>Instagram</b>@animatattoo</p>
+      <p><b>Instagram</b><a class="ig" href="https://instagram.com/animatattoo" rel="noopener">@animatattoo</a></p>
     </div>
   </div></section>
 </main>
@@ -221,8 +273,19 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
 </div></footer>
 <a class="btn float" href="#cita">Pedir cita</a>
 
+<dialog class="lb" id="lb" aria-label="Foto ampliada"><button aria-label="Cerrar">×</button><img alt=""><p></p></dialog>
 <script>
 (function(){
+  var lb=document.getElementById("lb"),li=lb.querySelector("img"),lc=lb.querySelector("p");
+  document.querySelectorAll(".w").forEach(function(f){
+    if(!f.querySelector("img"))return;
+    f.setAttribute("tabindex","0");
+    function open(){var im=f.querySelector("img");if(!im)return;li.src=im.src;li.alt=im.alt;lc.textContent=f.querySelector("figcaption").textContent;lb.showModal()}
+    f.addEventListener("click",open);
+    f.addEventListener("keydown",function(e){if(e.key==="Enter")open()});
+  });
+  lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+  lb.querySelector("button").addEventListener("click",function(){lb.close()});
   var pi=document.getElementById("pvi"),pt=document.getElementById("pvt");
   function show(b){
     document.querySelectorAll(".st").forEach(function(x){x.classList.toggle("on",x===b)});
@@ -239,7 +302,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;overflow:hidden}
   document.getElementById("f").addEventListener("submit",function(ev){
     ev.preventDefault();
     var d=new FormData(ev.target);
-    var t="Hola, soy "+d.get("n")+". Quiero un tatuaje de estilo "+d.get("e")+". "+d.get("i");
+    var t="Hola, soy "+d.get("n")+". Quiero un tatuaje de estilo "+d.get("e")+". Zona: "+(d.get("z")||"por definir")+". Tamaño: "+d.get("t")+". "+d.get("i");
     window.open("https://wa.me/18090000000?text="+encodeURIComponent(t),"_blank","noopener");
   });
 })();
